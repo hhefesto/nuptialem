@@ -172,6 +172,7 @@ homePage = do
                   toHtmlRaw  "<!-- col-sm-4 -->"
                 toHtmlRaw  "<!-- row -->"
                 a_ [ class_ "btn-2 margin-bottom gallery-btn", href_ "/galeria" ] $ "VER TODA LA GALERÍA"
+                a_ [ class_ "btn-2 margin-bottom gallery-btn", href_ "/galeria" ] $ "IR A MESA DE REGALOS"
               toHtmlRaw  "<!-- image-gallery -->"
             toHtmlRaw  "<!-- col-sm-10 -->"
           toHtmlRaw  "<!-- row -->"
