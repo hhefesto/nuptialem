@@ -190,11 +190,11 @@ homePage = do
                 div_ [ class_ "margin-bottom" ] $ do
                   h4_ $ "Templo Santa Rosa de Viterbo"
                   p_ $ span_ [ style_ "padding-left:20px" ] $ "José María Arteaga 89, Centro, 76000 Santiago de Querétaro, Qro."
-                  p_ $ span_ [ style_ "padding-left:20px" ] $ a_ [ href_ "https://goo.gl/maps/x6PNMfwvwytxnyP87" ] $ "Link Mapa Google"
+                  p_ $ span_ [ style_ "padding-left:20px" ] $ a_ [ href_ "https://goo.gl/maps/x6PNMfwvwytxnyP87" ] $ "Da click aquí para ver ubicación en mapa de Google"
                   br_ []
                   h4_ $ "Ceremonia Civíl y Banquete"
                   p_ $ span_ [ style_ "padding-left:20px" ] $ "Paseo Jurica 655, Jurica, 76100 Santiago de Querétaro, Qro."
-                  p_ $ span_ [ style_ "padding-left:20px" ] $ a_ [ href_ "https://goo.gl/maps/52Afrsm63b1RoBbv5" ] $ "Link Mapa Google"
+                  p_ $ span_ [ style_ "padding-left:20px" ] $ a_ [ href_ "https://goo.gl/maps/52Afrsm63b1RoBbv5" ] $ "Da click aquí para ver ubicación en mapa de Google"
                 toHtmlRaw  "<!-- margin-bottom -->"
               toHtmlRaw  "<!-- col-sm-10 -->"
             toHtmlRaw  "<!-- row -->"
