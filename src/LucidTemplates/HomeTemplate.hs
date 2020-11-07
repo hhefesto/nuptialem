@@ -205,7 +205,9 @@ homePage = do
         div_ [ class_ "container center-text" ] $ do
           p_ [ class_ "copyright" ] $ do
             toHtmlRaw  "<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->"
-            "HTML template by "
+            "Photos by "
+            a_ [ href_ "https://www.facebook.com/fcoecheverriafotografo", target_ "_blank" ] "Francisco Echeverría"
+            " | HTML template by "
             a_ [ href_ "https://colorlib.com", target_ "_blank" ] $ i_ [ class_ "icon-heart", ariaHidden_ "true" ] $ " Colorlib"
             " | Backend powered by "
             a_ [ href_ "https://www.yesodweb.com", target_ "_blank" ] $ "Yesod"
@@ -213,7 +215,7 @@ homePage = do
             a_ [ href_ "https://nixos.org/manual/nix/stable/", target_ "_blank" ] $ "Nix"
             " | Put together with love by "
             a_ [ href_ "https://github.com/hhefesto/nuptialem", target_ "_blank" ] $ "hhefesto "
-            a_ [ href_ "https://github.com/hhefesto/nuptialem" ] $ img_ [ style_ "padding-left: 10px;" , src_ "static/GitHub-Mark-32px.png" ]
+            a_ [ href_ "https://github.com/hhefesto/nuptialem", target_ "_blank" ] $ img_ [ style_ "padding-left: 10px;" , src_ "static/GitHub-Mark-32px.png" ]
             toHtmlRaw  "<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->"
       script_ [ src_ "static/html-template/common-js/jquery-3.1.1.min.js" ] $ ""
       script_ [ src_ "static/html-template/common-js/tether.min.js" ] $ ""
