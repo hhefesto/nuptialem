@@ -1,7 +1,7 @@
 { packageOverrides = pkgs: {
     haskellPackages = pkgs.haskellPackages.override {
       overrides = haskellPackagesNew: haskellPackagesOld: {
-        laurus-nobilis = (import ./default.nix {}).nuptialem.components.exes.nuptialem;
+        nuptialem = (import ./default.nix {}).nuptialem.components.exes.nuptialem;
       };
     };
     configuration-files-yesod = pkgs.runCommand "staticFilesYesod" { src = ./.; } ''
