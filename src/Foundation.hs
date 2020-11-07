@@ -181,20 +181,21 @@ instance Yesod App where
         -> Text -- ^ The MIME content type
         -> LByteString -- ^ The contents of the file
         -> Handler (Maybe (Either Text (Route App, [(Text, Text)])))
-    addStaticContent ext mime content = do
-        master <- getYesod
-        let staticDir = appStaticDir $ appSettings master
-        addStaticContentExternal
-            minifym
-            genFileName
-            staticDir
-            (StaticR . flip StaticRoute [])
-            ext
-            mime
-            content
-      where
-        -- Generate a unique filename based on the content itself
-        genFileName lbs = "autogen-" ++ base64md5 lbs
+    addStaticContent _ _ _ = pure Nothing
+    -- addStaticContent ext mime content = do
+    --     master <- getYesod
+    --     let staticDir = appStaticDir $ appSettings master
+    --     addStaticContentExternal
+    --         minifym
+    --         genFileName
+    --         staticDir
+    --         (StaticR . flip StaticRoute [])
+    --         ext
+    --         mime
+    --         content
+    --   where
+    --     -- Generate a unique filename based on the content itself
+    --     genFileName lbs = "autogen-" ++ base64md5 lbs
 
     -- What messages should be logged. The following includes all messages when
     -- in development, and warnings and errors in production.

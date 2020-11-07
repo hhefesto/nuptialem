@@ -29,17 +29,17 @@
     #   email = "hhefesto@rdataa.com";
     # };
 
-    # security.acme.acceptTerms = true;
-    # security.acme.certs."lauraydaniel.hhefesto.com" = {
-    #   email = "hhefesto@rdataa.com";
-    # };
+    security.acme.acceptTerms = true;
+    security.acme.certs."lauraydaniel.hhefesto.com" = {
+      email = "hhefesto@rdataa.com";
+    };
 
     services.nginx = {
       enable = true;
       
       virtualHosts."lauraydaniel.hhefesto.com" = {
-        # enableACME = true;
-        # forceSSL = true;
+        enableACME = true;
+        forceSSL = true;
         locations = {
           "/" = {
             proxyPass = "http://localhost:3000";
