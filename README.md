@@ -19,6 +19,7 @@ nix-shell -p haskellPackages.yesod-bin nixops stack
 
 0. Have a Google Compute Engine account with the credentials specified on ```nuptialem-gce.nix``` (proyect, serviceAccount, accessKey).
 1. Open firewall of that project (option on the Google Cloud Platform under Networking > VPC network > Firewall: (Ingress; Apply to all; IP ranges: 0.0.0.0/0; tcp:20,80,3000,443,5432; udp:20,80,3000,443,5432; Allow; 1000; default; Off ))
+   1.1 I surely opened more ports than needed, if you see a problem with this, do tell.
 
 ### Steps
 
