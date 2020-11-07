@@ -171,8 +171,8 @@ homePage = do
                     a_ [ href_ "static/html-template/images/my-pictures/galeria/galeria6.jpeg", data_ "fluidbox" "" ] $ img_ [ class_ "margin-bottom", src_ "static/html-template/images/my-pictures/galeria/galeria6-1.jpeg", alt_ "imagen de galería" ]
                   toHtmlRaw  "<!-- col-sm-4 -->"
                 toHtmlRaw  "<!-- row -->"
-                a_ [ class_ "btn-2 margin-bottom gallery-btn", href_ "/galeria" ] $ "VER TODA LA GALERÍA"
-                a_ [ class_ "btn-2 margin-bottom gallery-btn", href_ "/galeria" ] $ "IR A MESA DE REGALOS"
+                p_ $ a_ [ class_ "btn-2 margin-bottom gallery-btn", href_ "/galeria" ] $ "VER TODA LA GALERÍA"
+                p_ $ a_ [ class_ "btn-2 margin-bottom gallery-btn", href_ "/mesa-de-regalos" ] $ "IR A MESA DE REGALOS"
               toHtmlRaw  "<!-- image-gallery -->"
             toHtmlRaw  "<!-- col-sm-10 -->"
           toHtmlRaw  "<!-- row -->"
@@ -205,12 +205,15 @@ homePage = do
         div_ [ class_ "container center-text" ] $ do
           p_ [ class_ "copyright" ] $ do
             toHtmlRaw  "<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->"
-            "Copyright \169"
-            script_ "document.write(new Date().getFullYear());"
-            "All rights reserved | This template is made with"
-            i_ [ class_ "icon-heart", ariaHidden_ "true" ] $ ""
-            "by"
-            a_ [ href_ "https://colorlib.com", target_ "_blank" ] $ "Colorlib"
+            "HTML template by "
+            a_ [ href_ "https://colorlib.com", target_ "_blank" ] $ i_ [ class_ "icon-heart", ariaHidden_ "true" ] $ " Colorlib"
+            " | Backend powered by "
+            a_ [ href_ "https://www.yesodweb.com", target_ "_blank" ] $ "Yesod"
+            " + "
+            a_ [ href_ "https://nixos.org/manual/nix/stable/", target_ "_blank" ] $ "Nix"
+            " | Put together with love by "
+            a_ [ href_ "https://github.com/hhefesto/nuptialem", target_ "_blank" ] $ "hhefesto "
+            a_ [ href_ "https://github.com/hhefesto/nuptialem" ] $ img_ [ style_ "padding-left: 10px;" , src_ "static/GitHub-Mark-32px.png" ]
             toHtmlRaw  "<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->"
       script_ [ src_ "static/html-template/common-js/jquery-3.1.1.min.js" ] $ ""
       script_ [ src_ "static/html-template/common-js/tether.min.js" ] $ ""
