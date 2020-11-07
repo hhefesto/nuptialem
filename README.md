@@ -6,6 +6,8 @@ The easiest way for me to add your contribution is through a pull request.
 
 ## Development Environment
 
+The rest of this ```README.md``` assumes you are in this environment.
+
 ```sh
 # Be on channel NixOS 20.09 (I'll provide a propper nix-shell if someone asks)
 nix-shell -p haskellPackages.yesod-bin nixops stack
@@ -16,6 +18,7 @@ nix-shell -p haskellPackages.yesod-bin nixops stack
 ### Prerequisites
 
 0. Have a Google Compute Engine account with the credentials specified on ```nuptialem-gce.nix``` (proyect, serviceAccount, accessKey).
+1. Open firewall of that project (option on the Google Cloud Platform under Networking > VPC network > Firewall: (Ingress; Apply to all; IP ranges: 0.0.0.0/0; tcp:20,80,3000,443,5432; udp:20,80,3000,443,5432; Allow; 1000; default; Off ))
 
 ### Steps
 
@@ -36,7 +39,7 @@ nixops info -d nuptialem-gce
 
 ## Development
 
-Start a development server with:
+Start a development server (i.e. local development) with:
 
 ```sh
 yesod devel
